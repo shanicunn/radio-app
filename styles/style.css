@@ -11,6 +11,7 @@ f2cc8f
 body {
     background-color: antiquewhite;
     /* background-image: url("/assets/malte-wingen-PDX_a_82obo-unsplash.jpg"); */
+    margin-top: 5%;
  }
 .parent {
     margin: auto;
@@ -21,7 +22,8 @@ body {
                             "image main";
     grid-template-columns: 1fr 1fr;
     width: 70vw;
-    box-shadow: 1px 1px 5px 1px #f2cc8f;
+    /* box-shadow: 1px 1px 5px 1px #f2cc8f; */
+    
 }
 .child {
     background-color: #f4f1de;
@@ -43,8 +45,25 @@ body {
 img {
     height: 400px;
     width: 400px;
-    
-    margin: 10px;
+    animation-name: imageBounce;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    margin-left: 20%;
+    border-radius: 20px;
+}
+@keyframes imageBounce {
+    from {
+        transform : scale(1);
+        opacity   : 1;
+    }
+    50% {
+        transform : scale(0.75);
+        opacity   : 0.25;
+    }
+    to {
+        transform : scale(1);
+        opacity   : 1;
+    }
 }
 /*  */
 .main {
@@ -151,9 +170,54 @@ h1 {
     font-size: 50px;
     text-align: center;
     text-shadow: 2px 2px 5px #3d405b;
-    
+    margin-top: 5px;
 }
 h2 {
     font-family: 'Poppins', sans-serif;
     color: #e07a5f;
+}
+
+.glow-body:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    /* background-size: 400%; */
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+.glow-body:active {
+    color: #000
+}
+
+.glow-body:active:after {
+    background: transparent;
+}
+
+.glow-body:hover:before {
+    opacity: 1;
+}
+
+.glow-body:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #e07a5f;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
 }
