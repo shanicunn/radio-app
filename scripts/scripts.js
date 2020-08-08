@@ -67,9 +67,9 @@ let changeShuffle = () => {
     // console.log(songPlaying);
     console.log("Now Playing:", songPlaying, "by", songArtist);
 
-    document.getElementById("station").innerHTML ="Station:  " + stationPlaying;
-    document.getElementById("artist").innerHTML = "Artist: " + songArtist;
-    document.getElementById("song").innerHTML = "Song: " + songPlaying;
+    document.getElementById("stationChange").innerHTML = stationPlaying;
+    document.getElementById("artistChange").innerHTML = songArtist;
+    document.getElementById("songChange").innerHTML = songPlaying;
     document.getElementById("img").src = songCover;
     document.getElementById("music").setAttribute('src', musicUrl);
     document.getElementById("music").load();
