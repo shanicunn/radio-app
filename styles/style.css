@@ -1,0 +1,92 @@
+/* 
+f4f1de
+e07a5f
+3d405b
+81b29a
+f2cc8f
+ */
+
+body {
+    background-color: antiquewhite;
+ }
+.parent {
+    margin: auto;
+    /* border: solid #81b29a; */
+    background-image: url("");
+    display: grid;
+    grid-template-areas:    "header header"
+                            "image main";
+    grid-template-columns: 1fr 1fr;
+    width: 70vw;
+    box-shadow: 1px 1px 5px 1px black;
+}
+.child {
+    background-color: #f4f1de;
+    /* border: 1px solid black; */
+}
+/*  */
+.header {
+    grid-area: header;
+    height: 200px;
+    background-color: #f4f1de;
+    border-bottom: #81b29a 1px solid;
+}
+/*  */
+.image {
+    grid-area: image;
+    /* width: 50%; */
+}
+img {
+    height: 400px;
+    width: 400px;
+    
+    margin: 5px;
+}
+/*  */
+.main {
+    grid-area: main;
+    padding: 5px;
+    /* width: 50%; */
+}
+/* Button */
+
+button {
+    outline: none;
+    margin: auto;
+    background: #e0e0e0;
+    cursor: pointer;
+    border: none;
+    padding: .4em .8em;
+    text-rendering: optimizeLegibility;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 300;
+    color: inherit;
+    
+}
+
+button:hover
+{
+    background: #e6e6e6;
+    color: #f2cc8f;
+}
+
+button:active
+{
+    background: #d6d6d6;
+   
+}
+
+/* Text */
+h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #f4f1de;
+    font-size: 70px;
+    text-align: center;
+    text-shadow: 2px 2px 5px black;
+    
+}
+h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #e07a5f;
+}
