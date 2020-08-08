@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shani's Radio</title>
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 
@@ -16,13 +16,20 @@
         <header class="child header">
             <h1>WELCOME TO SHANI'S RADIO</h1>
         </header>
-
+        <div class="child image">
+            <img id="img" src="" alt="">
+        </div>
         <!-- Radio Portion -->
         <main class="child main">
             <h2 id="station">Station: </h2><br>
             <h2 id="artist">Artist: </h2><br>
             <h2 id="song">Song: </h2><br>
-                
+            <audio id="music" controls autoplay>
+                <source src="" type="audio/ogg">
+                <source src="" type="audio/mpeg">
+              Your browser does not support the audio element.
+              </audio>
+              <br />
             <!-- Radio Button -->
             <button onclick="changeShuffle()">Change Station</button>
 
@@ -32,6 +39,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/scripts/scripts.js"></script>
+    <script src="scripts/scripts.js"></script>
 </body>
-</html># radio-app
+</html>
