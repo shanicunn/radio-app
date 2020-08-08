@@ -79,3 +79,8 @@ let changeShuffle = () => {
 
 // changeShuffle();
 
+music.addEventListener("ended", function() {
+    music.currentTime = 0;
+    console.log("Song has ended");
+    changeShuffle();
+})
