@@ -8,6 +8,7 @@ f2cc8f
 
 body {
     background-color: antiquewhite;
+    background-image: url("/assets/malte-wingen-PDX_a_82obo-unsplash.jpg");
  }
 .parent {
     margin: auto;
@@ -40,7 +41,7 @@ img {
     height: 400px;
     width: 400px;
     
-    margin: 5px;
+    margin: 10px;
 }
 /*  */
 .main {
@@ -48,9 +49,12 @@ img {
     padding: 5px;
     /* width: 50%; */
 }
+audio {
+    visibility: hidden;
+}
 /* Button */
 
-button {
+/* button {
     outline: none;
     margin: auto;
     background: #e0e0e0;
@@ -62,7 +66,7 @@ button {
     font-family: inherit;
     font-weight: 300;
     color: inherit;
-    
+    box-shadow: 1px 1px 1px 1px black;
 }
 
 button:hover
@@ -75,8 +79,71 @@ button:active
 {
     background: #d6d6d6;
    
+} */
+/* https://webdeasy.de/en/top-css-buttons-en/#:~:text=Top%2025%20CSS%20Buttons%20%28%2B%20animations%29%201%20Hover,Button.%2010%20Button%20N%C2%B0%20045.%20More%20items... */
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #e07a5f;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
 }
 
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #e07a5f;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+
+Resources
 /* Text */
 h1 {
     font-family: 'Poppins', sans-serif;
