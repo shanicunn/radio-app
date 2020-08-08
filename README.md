@@ -4,6 +4,6 @@
 
 # I plan to:
 * create a more modern interface
-* allow songs to change on their own upon completion
+* allow songs to change on their own upon completion (Completed 8/7/2020)
 
 Upload August 7, 2020
