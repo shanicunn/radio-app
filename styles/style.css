@@ -5,33 +5,36 @@ e07a5f
 81b29a
 f2cc8f
  */
+/* <a href='https://www.freepik.com/vectors/background'>Background vector created by rawpixel.com - www.freepik.com</a> */
+/* <a href='https://www.freepik.com/photos/background'>Background photo created by freepik - www.freepik.com</a> */
 
 body {
     background-color: antiquewhite;
-    background-image: url("/assets/malte-wingen-PDX_a_82obo-unsplash.jpg");
+    /* background-image: url("/assets/malte-wingen-PDX_a_82obo-unsplash.jpg"); */
  }
 .parent {
     margin: auto;
     /* border: solid #81b29a; */
-    background-image: url("");
+    background-image: url("assets/397.jpg");
     display: grid;
     grid-template-areas:    "header header"
                             "image main";
     grid-template-columns: 1fr 1fr;
     width: 70vw;
-    box-shadow: 1px 1px 5px 1px black;
+    box-shadow: 1px 1px 5px 1px #f2cc8f;
 }
 .child {
     background-color: #f4f1de;
     /* border: 1px solid black; */
 }
-/*  */
+/* Header */
 .header {
     grid-area: header;
-    height: 200px;
+    height: 100px;
     background-color: #f4f1de;
-    border-bottom: #81b29a 1px solid;
+    /* border-bottom: #81b29a 1px solid; */
 }
+
 /*  */
 .image {
     grid-area: image;
@@ -48,6 +51,7 @@ img {
     grid-area: main;
     padding: 5px;
     /* width: 50%; */
+    text-align: center;
 }
 audio {
     visibility: hidden;
@@ -67,20 +71,20 @@ audio {
     font-weight: 300;
     color: inherit;
     box-shadow: 1px 1px 1px 1px black;
-}
+} */
 
-button:hover
+/* button:hover
 {
     background: #e6e6e6;
     color: #f2cc8f;
-}
+} */
 
-button:active
+/* button:active
 {
     background: #d6d6d6;
    
 } */
-/* https://webdeasy.de/en/top-css-buttons-en/#:~:text=Top%2025%20CSS%20Buttons%20%28%2B%20animations%29%201%20Hover,Button.%2010%20Button%20N%C2%B0%20045.%20More%20items... */
+/* https://webdeasy.de/en/top-css-buttons-en/#:~:text=%2030%20cool%20CSS%20Buttons%20%E2%80%93%20with%20animations%21,%2020%2027%20Gooey%20Menu.%20%20More */
 .glow-on-hover {
     width: 220px;
     height: 50px;
@@ -140,17 +144,13 @@ button:active
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
-
-
-
-Resources
 /* Text */
 h1 {
     font-family: 'Poppins', sans-serif;
     color: #f4f1de;
-    font-size: 70px;
+    font-size: 50px;
     text-align: center;
-    text-shadow: 2px 2px 5px black;
+    text-shadow: 2px 2px 5px #3d405b;
     
 }
 h2 {
